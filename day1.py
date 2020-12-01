@@ -6,10 +6,8 @@ for item in f:
 def twoSum(lst):
     for i in range(len(lst)):
         for j in range(i,len(lst)):
-            if lst[i] + lst[j] == 2020:
-                return [lst[i],lst[j]]
+            for k in range(j, len(lst)):
+                if lst[i] + lst[j] + lst[k] == 2020:
+                    return lst[i] * lst[j] * lst[k]
 
-result1 = twoSum(lst)[0]
-result2 = twoSum(lst)[1]
-
-print(result1 * result2)
+print(twoSum(lst))
